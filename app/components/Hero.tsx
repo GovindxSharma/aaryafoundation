@@ -16,7 +16,7 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 text-lg md:text-xl">
-          Join Arya Foundation in protecting cows, nurturing nature,  
+          Join Aarya Foundation in protecting cows, nurturing nature,  
           and spreading compassion across the world.
         </p>
 

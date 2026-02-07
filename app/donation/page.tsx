@@ -25,7 +25,7 @@ export default function Donation() {
 
           <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
             Your contribution provides food, shelter, medical care and love to rescued cows.  
-            As a token of gratitude, every donor receives a small gift from Arya Foundation.
+            As a token of gratitude, every donor receives a small gift from Aarya Foundation.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function Donation() {
                 Bank Transfer
               </h3>
 
-              <p><b>Account Name:</b> Arya Foundation</p>
+              <p><b>Account Name:</b> Aarya Foundation</p>
               <p><b>Account Number:</b> 1234567890</p>
               <p><b>IFSC Code:</b> ABCD0123456</p>
               <p><b>Bank:</b> State Bank of India</p>
@@ -80,7 +80,7 @@ export default function Donation() {
               </h3>
 
               <p className="text-xl font-bold text-green-900">
-                aryafoundation@upi
+                aaryafoundation@upi
               </p>
 
               <div className="mt-4 flex flex-col items-center">

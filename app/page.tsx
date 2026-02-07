@@ -59,7 +59,7 @@ export default function Home() {
 
     <p className="mt-4 text-gray-200">
       Your small contribution can bring a big change in the lives of cows.  
-      Join Arya Foundation and help us build a compassionate and loving ecosystem.
+      Join Aarya Foundation and help us build a compassionate and loving ecosystem.
     </p>
 
     <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">

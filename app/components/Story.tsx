@@ -9,7 +9,7 @@ export default function Story() {
         <div className="rounded-lg overflow-hidden shadow-lg">
           <Image
             src="/image.png"
-            alt="Founders of Arya Foundation"
+            alt="Founders of Aarya Foundation"
             width={700}
             height={500}
             className="w-full h-full object-cover"
@@ -29,7 +29,7 @@ export default function Story() {
 
           <p className="mt-4 text-gray-700 leading-relaxed">
             What started as a small act of compassion slowly turned into a full-time mission.  
-            With faith, hard work, and the blessings of the community, Arya Foundation was born.
+            With faith, hard work, and the blessings of the community, Aarya Foundation was born.
           </p>
 
           <p className="mt-4 text-gray-700 leading-relaxed">

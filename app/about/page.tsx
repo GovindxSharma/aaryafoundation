@@ -8,7 +8,7 @@ export default function About() {
         {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold">
-            About Arya Foundation
+            About Aarya Foundation
           </h1>
 
           <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
@@ -25,7 +25,7 @@ export default function About() {
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              From humble beginnings, Arya Foundation was born out of pure love
+              From humble beginnings, Aarya Foundation was born out of pure love
               for Gaumata. What started as caring for a few abandoned cows slowly
               turned into a full-time mission of compassion and service.
             </p>
@@ -37,7 +37,7 @@ export default function About() {
             </p>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              Today Arya Foundation is not just a shelter, but a growing
+              Today Aarya Foundation is not just a shelter, but a growing
               ecosystem promoting natural living and cow-based sustainability.
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function About() {
           <div className="rounded-lg overflow-hidden shadow-lg">
             <Image
               src="/image.png"
-              alt="Arya Foundation Gaushala"
+              alt="Aarya Foundation Gaushala"
               width={700}
               height={500}
               className="w-full h-full object-cover"
@@ -95,7 +95,7 @@ export default function About() {
           </h2>
 
           <p className="mt-4 text-gray-700 text-center max-w-3xl mx-auto">
-            Arya Foundation aims to create a self-sustaining ecosystem based on cows,
+            Aarya Foundation aims to create a self-sustaining ecosystem based on cows,
             nature, and community support.
           </p>
 

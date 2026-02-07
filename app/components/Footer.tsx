@@ -7,7 +7,7 @@ export default function Footer() {
 
         {/* About */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Arya Foundation</h3>
+          <h3 className="text-xl font-bold mb-4">Aarya Foundation</h3>
           <p className="text-gray-300">
             Dedicated to the protection and welfare of cows, promoting natural living,
             and spreading compassion through Gauseva.
@@ -30,7 +30,7 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <p className="text-gray-300">
-            Arya Foundation Gaushala<br />
+            Aarya Foundation Gaushala<br />
             Village Area, City, State<br />
             India
           </p>
@@ -40,7 +40,7 @@ export default function Footer() {
           </p>
 
           <p className="text-gray-300">
-            Email: info@aryafoundation.org
+            Email: info@aaryafoundation.org
           </p>
         </div>
 
@@ -63,7 +63,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-green-800 text-center py-4 text-gray-300">
-        © {new Date().getFullYear()} Arya Foundation – Gauseva Initiative. All Rights Reserved.
+        © {new Date().getFullYear()} Aarya Foundation – Gauseva Initiative. All Rights Reserved.
       </div>
     </footer>
   );

@@ -24,7 +24,7 @@ export default function Navbar() {
           {/* LOGO */}
           <Link href="/">
             <h1 className="text-xl md:text-2xl font-bold tracking-wide">
-              Arya Foundation
+              Aarya Foundation
             </h1>
           </Link>
 

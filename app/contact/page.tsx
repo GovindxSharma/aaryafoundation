@@ -17,7 +17,7 @@ export default function Contact() {
         {/* HEADER */}
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Contact Arya Foundation
+            Contact Aarya Foundation
           </h1>
 
           <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
@@ -38,7 +38,7 @@ export default function Contact() {
             <div>
               <h3 className="font-semibold">Address</h3>
               <p className="text-gray-700">
-                Arya Foundation Ashram,  
+                Aarya Foundation Ashram,  
                 Near Gauseva Dham,  
                 Your City, India
               </p>
@@ -51,7 +51,7 @@ export default function Contact() {
 
             <div>
               <h3 className="font-semibold">Email</h3>
-              <p className="text-gray-700">info@aryafoundation.com</p>
+              <p className="text-gray-700">info@aaryafoundation.com</p>
             </div>
 
             <div>
