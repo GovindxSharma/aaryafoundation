@@ -1,8 +1,9 @@
 import Hero from "./components/Hero";
-import Vision from "./components/Vision";
 import Gallery from "./components/Gallery";
 import Story from "./components/Story";
 import ProductPreview from "./components/ProductPreview";
+import SevaSection from "./components/SevaSection";
+import TestimonialImpact from "./components/TestimonialImpact";
 
 export default function Home() {
   return (
@@ -13,19 +14,15 @@ export default function Home() {
         <Hero />
       </section>
 
-      {/* VISION SECTION */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
-          <Vision />
+          <SevaSection />
         </div>
       </section>
 
       {/* GALLERY SECTION */}
       <section className="py-16 bg-green-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-center mb-8">
-            Our Lovely Cows
-          </h2>
           <Gallery />
         </div>
       </section>
@@ -43,6 +40,15 @@ export default function Home() {
           <ProductPreview />
         </div>
       </section>
+
+     
+       
+      <section className="py-16 bg-green-50">
+        <div className="container mx-auto px-4">
+          <TestimonialImpact/>
+        </div>
+      </section>
+
 
       {/* FINAL CTA */}
       <section className="py-20 bg-linear-to-r from-green-700 to-green-500 text-white text-center">
