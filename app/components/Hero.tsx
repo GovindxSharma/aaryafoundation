@@ -1,12 +1,13 @@
 export default function Hero() {
   return (
     <section
-      className="relative flex items-center justify-center text-center min-h-[80vh] bg-cover bg-center"
+      className="relative flex items-center justify-center text-center min-h-[calc(100vh-64px)] bg-cover bg-center"
       style={{
-        backgroundImage: "url('/hero.png')",
+        backgroundImage: "url('/herotest.png')",
       }}
     >
-     
+      {/* Blur Overlay */}
+      <div className="absolute inset-0 bg-black/25 backdrop"></div>
 
       {/* Content */}
       <div className="relative z-10 px-4 max-w-3xl mx-auto text-white animate-fadeIn">
