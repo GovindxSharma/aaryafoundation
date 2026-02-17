@@ -10,19 +10,19 @@ export interface Product {
       id: 1,
       name: "Pure A2 Ghee",
       price: 1200,
-      image: "/image.png",
+      image: "/A2Ghee.png",
     },
     {
       id: 2,
       name: "Organic Dhoop",
       price: 250,
-      image: "/image.png",
+      image: "/cowdhoop.png",
     },
     {
         id: 3,
-        name: "Cow Dung Cake",
+        name: "Cow Shampoo",
         price: 250,
-        image: "/image.png",
+        image: "/GauShampoo.png",
       },
   ];
   

@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Gallery() {
   const images: string[] = [
-    "/image.png",
-   "/image.png",
-   "/image.png",
-   "/image.png",
-   "/image.png",
-   "/image.png",
+    "/babycow.jpeg",
+   "/cow.jpeg",
+   "/cowcare.jpeg",
+   "/cowcare1.jpeg",
+   "/cowcare2.jpeg",
+   "/cc.jpeg",
   ];
 
   return (
@@ -22,18 +22,21 @@ export default function Gallery() {
 
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {images.map((img, i) => (
-          <div
-            key={i}
-            className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition duration-300"
-          >
-            <Image
-              src={img}
-              alt={`Gaushala image ${i + 1}`}
-              width={600}
-              height={400}
-              className="w-full h-62.5 object-cover hover:scale-105 transition duration-300"
-            />
-          </div>
+        <div
+        key={i}
+        className="rounded-lg shadow-lg hover:shadow-2xl transition duration-300 bg-white"
+      >
+        <div className="w-full h-64 flex items-center justify-center overflow-hidden">
+          <Image
+            src={img}
+            alt={`Gaushala image ${i + 1}`}
+            width={600}
+            height={400}
+            className="object-contain max-h-full w-auto hover:scale-105 transition duration-300"
+          />
+        </div>
+      </div>
+      
         ))}
       </div>
 

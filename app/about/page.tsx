@@ -26,7 +26,7 @@ export default function About() {
 
           <div className="relative w-full h-[260px] sm:h-[340px] md:h-[460px] rounded-3xl overflow-hidden shadow-2xl">
             <Image
-              src="/image.png"
+              src="/about.jpeg"
               alt="Aarya Foundation Gaushala"
               fill
               className="object-cover"

@@ -8,7 +8,7 @@ export default function Story() {
         {/* Image Side */}
         <div className="rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/image.png"
+            src="/about.jpeg"
             alt="Founders of Aarya Foundation"
             width={700}
             height={500}
