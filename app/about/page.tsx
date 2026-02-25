@@ -4,7 +4,7 @@ export default function About() {
   const stories = [
     {
       name: "Prasad Govind Purohit",
-      title: "The Visionary Who Chose Seva Over Security",
+      title: "The Visionary Who Chose Seva Over Security ",
       image: "/purohit.png", // change if needed
       content: (
         <>
