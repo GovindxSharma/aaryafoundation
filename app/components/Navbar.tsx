@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -26,21 +27,31 @@ export default function Navbar() {
     { name: "Home", path: "/", icon: <Home size={20} /> },
     { name: "About", path: "/about", icon: <Info size={20} /> },
     { name: "Products", path: "/products", icon: <ShoppingBag size={20} /> },
-    { name: "Donation", path: "/donation", icon: <HeartHandshake size={20} /> },
     { name: "Contact", path: "/contact", icon: <Phone size={20} /> },
+    { name: "Careers", path: "/careers", icon: <Info size={20} /> },
   ];
 
   return (
     <nav className="bg-green-900 text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+      <div className="flex justify-between items-center h-20 md:h-24">
           
           {/* LOGO */}
-          <Link href="/">
-            <h1 className="text-xl md:text-2xl font-bold tracking-wide">
-              Aarya Foundation
-            </h1>
-          </Link>
+          <Link href="/" className="flex items-center">
+  <Image
+    src="/aryalogo.png"
+    alt="Aarya Foundation Logo"
+    width={120}
+    height={120}
+    priority
+    className="
+      w-16 h-16 md:w-20 md:h-20
+      object-contain
+      brightness-0 invert
+      drop-shadow-lg
+    "
+  />
+</Link>
 
           {/* DESKTOP MENU */}
           <div className="hidden md:flex items-center space-x-6">
@@ -104,9 +115,18 @@ export default function Navbar() {
         >
           {/* HEADER */}
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-xl font-bold text-green-900">
-              Aarya Foundation
-            </h2>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/aryalogo.png"
+                alt="Aarya Foundation Logo"
+                width={36}
+                height={36}
+                className="object-contain"
+              />
+              <h2 className="text-xl font-bold text-green-900">
+                Aarya Foundation
+              </h2>
+            </div>
 
             <button
               onClick={() => setIsOpen(false)}

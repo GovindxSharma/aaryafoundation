@@ -1,6 +1,108 @@
 import Image from "next/image";
 
 export default function About() {
+  const stories = [
+    {
+      name: "Prasad Govind Purohit",
+      title: "The Visionary Who Chose Seva Over Security",
+      image: "/purohit.png", // change if needed
+      content: (
+        <>
+          <p>
+            In 2008, after spending 18 years in a stable hardware engineering
+            career, Prasad Govind Purohit made a decision that changed his life
+            forever. A meeting with Rajiv Dixit in Maharashtra opened his eyes
+            to the forgotten science of Ayurveda, desi farming, and the sacred
+            role of cows in Indian life.
+          </p>
+
+          <p>
+            Coming from a scientific background, he was skeptical — until life
+            tested him. When his wife Seema fell gravely ill in Belgaum, modern
+            methods gave little relief. With faith and courage, Prasad turned to
+            traditional desi remedies and pure cow milk and ghee.
+          </p>
+
+          <p>
+            What he witnessed was not just recovery — it was transformation.
+            Beginning with just six cows, his journey survived relocations,
+            floods, fodder shortages, and even a life-threatening accident that
+            left him bedridden.
+          </p>
+
+          <p className="font-semibold text-green-900">
+            Today his dream is clear — to build a fully Atmanirbhar Gaushala
+            rooted in Indian values and transparency.
+          </p>
+        </>
+      ),
+    },
+    {
+      name: "Seema Prasad Purohit",
+      title: "The Heart That Speaks from Experience",
+      image: "/seema.jpeg", // change if needed
+      content: (
+        <>
+          <p>
+            If Prasad Ji is the foundation, Seema Ji is the heartbeat of Aarya
+            Foundation. A music teacher by profession and a sevika by spirit,
+            she has devoted the last eight years to cow seva.
+          </p>
+
+          <p>
+            Her journey is deeply personal. She experienced illness caused by
+            unhealthy surroundings and poor lifestyle choices. Her healing
+            began not in a hospital ward, but in the peaceful presence of cows,
+            in pure desi milk, and in ghee made by hand.
+          </p>
+
+          <p>
+            She does not speak from books — she speaks from lived truth. Today
+            she creates milk, ghee, hair-care oils, and cow-dung household
+            products entirely in-house.
+          </p>
+
+          <p className="font-semibold text-green-900">
+            For her, this is not business. It is seva — for humans and for Gau
+            Mata.
+          </p>
+        </>
+      ),
+    },
+    {
+      name: "Gaupalak Niraj Kantilal Purohit",
+      title: "The Strategist Building an Atmanirbhar Future",
+      image: "/neeraj.png", // change if needed
+      content: (
+        <>
+          <p>
+            Behind every mission that survives long-term, there is structure.
+            Niraj Purohit brings that strength to Aarya Foundation with 20+
+            years of marketing and business experience and 5+ years dedicated
+            to cow-based initiatives.
+          </p>
+
+          <p>
+            As Founder of Aatmaya Farms, he works across Maharashtra and parts
+            of Gujarat helping Gaushalas transform from donation-dependent
+            shelters into structured rural enterprises.
+          </p>
+
+          <p>
+            His strategy focuses on high-quality cow products, transparent
+            systems, and reliable income streams — ensuring Gau Seva stands on
+            strong economics, not just emotion.
+          </p>
+
+          <p className="font-semibold text-green-900">
+            His vision: Gaushalas as centers of rural entrepreneurship and
+            Atmanirbhar growth.
+          </p>
+        </>
+      ),
+    },
+  ];
+
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-green-50/40">
       <div className="container mx-auto px-5 max-w-6xl">
@@ -17,16 +119,15 @@ export default function About() {
             </p>
 
             <p className="mt-6 text-gray-700 text-lg leading-relaxed">
-              Founded by Seema Prasad Purohit and Prasad Govind Purohit,
-              Aarya Foundation is a living story of compassion, healing,
-              and devotion — creating a dignified life for cows while
-              reviving desi farming wisdom and natural living.
+              Aarya Foundation is a living story of compassion, healing, and
+              devotion — creating dignified lives for cows while reviving desi
+              farming wisdom and natural living.
             </p>
           </div>
 
           <div className="relative w-full h-[260px] sm:h-[340px] md:h-[460px] rounded-3xl overflow-hidden shadow-2xl">
             <Image
-              src="/about.jpeg"
+              src="/about.png"
               alt="Aarya Foundation Gaushala"
               fill
               className="object-cover"
@@ -35,114 +136,68 @@ export default function About() {
           </div>
         </div>
 
-        {/* INTRO */}
-        <div className="mt-14 md:mt-20 max-w-4xl mx-auto text-center space-y-4">
-          <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
-            What began as a simple act of care slowly grew into a lifelong
-            mission — to protect cows, heal families through traditional
-            remedies, and build a compassionate self-reliant ecosystem.
-          </p>
-        </div>
-
-        {/* VISION & MISSION */}
-        <div className="mt-16 md:mt-24 grid md:grid-cols-2 gap-8">
-          <div className="bg-white p-7 md:p-9 rounded-3xl shadow-md border">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Our Vision
-            </h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              To rebuild a self-reliant ecosystem where cows live with
-              dignity, traditional Indian wisdom is revived, and
-              communities receive pure cow-based nourishment for body
-              and spirit.
-            </p>
-          </div>
-
-          <div className="bg-white p-7 md:p-9 rounded-3xl shadow-md border">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Our Mission
-            </h2>
-            <ul className="list-disc pl-5 space-y-3 text-gray-700 text-lg">
-              <li>Rescue and shelter vulnerable cows with full care.</li>
-              <li>Produce honest in-house cow products for sustainability.</li>
-              <li>Spread awareness about organic and desi alternatives.</li>
-              <li>Train farmers to build an Atmanirbhar model.</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* JOURNEY */}
-        <div className="mt-20 md:mt-28">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
-            Our Journey
-          </h2>
-
-          <div className="space-y-6 max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed">
-            <p>
-              After 18 years as a hardware engineer, Prasad’s encounter
-              with traditional Indian knowledge transformed his path.
-              A personal health crisis guided the family toward desi
-              remedies and milk — reshaping their life’s purpose.
-            </p>
-
-            <p>
-              Beginning with just six cows, the mission survived
-              relocations, financial hardship, breeding challenges,
-              COVID-19 struggles, and even a life-threatening accident.
-              Yet devotion never faded.
-            </p>
-
-            <p>
-              Today, Aarya Foundation stands as a community-supported
-              gaushala dedicated to compassion, sustainability, and
-              service.
-            </p>
-          </div>
-        </div>
-
-        {/* PRODUCTS */}
-        <div className="mt-20 md:mt-28 bg-green-50 rounded-3xl p-8 md:p-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
-            What We Make
-          </h2>
-
-          <div className="mt-10 grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              "Pure cow milk",
-              "Cold-pressed desi ghee",
-              "Hair-care oil",
-              "Dung-based household products",
-            ].map((item) => (
-              <div
-                key={item}
-                className="bg-white p-6 rounded-2xl shadow-sm text-center font-medium text-lg"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-8 text-center text-gray-700 text-lg">
-            Every contribution directly supports feeding, medicine,
-            and shelter for the cows.
-          </p>
-        </div>
-
-        {/* HOW TO HELP */}
+        {/* STORIES HEADER */}
         <div className="mt-20 md:mt-28 text-center">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Be Part of This Seva
+            The People Behind the Seva
           </h2>
+          <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
+            Three journeys. One mission. A lifelong commitment to Gau Seva and
+            Atmanirbhar sustainability.
+          </p>
+        </div>
 
-          <ul className="mt-8 space-y-3 text-gray-700 text-lg max-w-2xl mx-auto">
-            <li>Donate to support daily care and fodder.</li>
-            <li>Buy products that fund cow welfare.</li>
-            <li>Sponsor a cow or calf.</li>
-            <li>Provide medicines, fodder, or equipment.</li>
-            <li>Volunteer or spread awareness.</li>
-          </ul>
+        {/* STORIES */}
+        <div className="mt-14 md:mt-16 space-y-16">
+          {stories.map((story, index) => (
+            <div
+              key={story.name}
+              className={`grid md:grid-cols-2 gap-10 items-center ${
+                index % 2 === 1 ? "md:flex-row-reverse" : ""
+              }`}
+            >
+             <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl bg-gray-100">
+  <Image
+    src={story.image}
+    alt={story.name}
+    fill
+    sizes="(max-width: 640px) 100vw,
+           (max-width: 1024px) 50vw,
+           33vw"
+    className="object-contain"
+    quality={90}
+  />
+</div>
 
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold">
+                  {story.name}
+                </h3>
+
+                <p className="mt-2 text-green-900 font-semibold text-lg">
+                  {story.title}
+                </p>
+
+                <div className="mt-4 space-y-4 text-gray-700 text-lg leading-relaxed">
+                  {story.content}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* FINAL CTA */}
+        <div className="mt-24 md:mt-28 text-center bg-green-50 rounded-3xl p-10 md:p-14">
+          <h3 className="text-2xl md:text-3xl font-bold">
+            Be Part of This Seva
+          </h3>
+
+          <p className="mt-4 text-gray-700 text-lg max-w-2xl mx-auto">
+            Your support helps us feed, shelter, and protect every cow with
+            dignity and love.
+          </p>
+
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="/donation"
               className="bg-green-900 text-white px-8 py-3.5 rounded-2xl shadow hover:bg-green-800 transition text-lg font-semibold"
@@ -157,20 +212,6 @@ export default function About() {
               Contact / Volunteer
             </a>
           </div>
-        </div>
-
-        {/* FINAL NOTE */}
-        <div className="mt-20 md:mt-28 text-center max-w-3xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            A Living Promise
-          </h3>
-
-          <p className="text-gray-700 text-lg leading-relaxed">
-            Aarya Foundation is more than a gaushala — it is a promise
-            of compassion, healing, and sustainable tradition. Your
-            support transforms struggle into a safe home for cows and
-            the communities that depend on them.
-          </p>
         </div>
       </div>
     </section>

@@ -51,6 +51,61 @@ export default function Donation() {
           </p>
         </div>
 
+        {/* 🐄 GAU GULLAK SECTION */}
+<div className="mt-12 bg-white p-8 rounded-lg shadow">
+
+<div className="grid md:grid-cols-2 gap-8 items-center">
+
+  {/* LEFT — IMAGE */}
+  <div className="w-full">
+    <Image
+      src="/gaugullak.png" // your image
+      alt="Gau Gullak"
+      width={500}
+      height={400}
+      className="rounded-lg w-full object-cover"
+    />
+  </div>
+
+  {/* RIGHT — CONTENT */}
+  <div>
+    <h2 className="text-3xl font-bold text-green-900 mb-4">
+       Gau Gullak – Chhoti Bachat, Badi Seva
+    </h2>
+
+    <p className="text-gray-700 leading-relaxed">
+      गौ गुल्लक एक सरल और प्यारा प्रयास है जिससे हम हर घर में सेवा की परंपरा
+      शुरू करना चाहते हैं। हम आपके घर एक फिजिकल गुल्लक देंगे जिसमें बच्चे
+      अपनी इच्छा से छोटी छोटी बचत कर सकते हैं — जैसे पॉकेट मनी का हिस्सा,
+      त्योहार के पैसे या किसी खुशी के मौके पर।
+    </p>
+
+    <p className="text-gray-700 leading-relaxed mt-3">
+      जब गुल्लक भर जाए, आप परिवार के साथ मिलकर उसमें जमा राशि को गिनकर
+      ऑनलाइन आर्या फाउंडेशन को ट्रांसफर कर सकते हैं। हर छोटा सिक्का हमारी
+      गौशाला के लिए भोजन, दवा और सुरक्षा का सहारा बनता है।
+    </p>
+
+    <div className="mt-4 bg-green-50 border border-green-200 p-4 rounded">
+      <p className="text-green-900 font-semibold">
+        यह सिर्फ दान नहीं है — यह एक संस्कार है जो अगली पीढ़ी को दिया जा रहा है।
+      </p>
+    </div>
+  </div>
+</div>
+
+{/* CTA */}
+<div className="mt-8 text-center">
+  <a
+    href="https://wa.me/919876543210"
+    target="_blank"
+    className="inline-block bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition font-semibold"
+  >
+     Request Gau Gullak for Your Child
+  </a>
+</div>
+</div>
+
         {/* PAYMENT DETAILS */}
         <div className="mt-10 bg-white p-8 rounded-lg shadow">
 
@@ -66,11 +121,11 @@ export default function Donation() {
                 Bank Transfer
               </h3>
 
-              <p><b>Account Name:</b> Aarya Foundation</p>
-              <p><b>Account Number:</b> 1234567890</p>
-              <p><b>IFSC Code:</b> ABCD0123456</p>
-              <p><b>Bank:</b> State Bank of India</p>
-              <p><b>Branch:</b> Your City Branch</p>
+              <p><b>Account Name:</b> AARYA FOUNDATION KOHLAPUR</p>
+              <p><b>Account Number:</b> 321401010042081</p>
+              <p><b>IFSC Code:</b> UBIN0532142</p>
+              <p><b>Bank:</b> Union Bank </p>
+              <p><b>Branch:</b> Kohlapur Laxmipuri Branch</p>
             </div>
 
             {/* UPI */}

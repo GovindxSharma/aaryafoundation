@@ -38,15 +38,15 @@ export default function Contact() {
             <div>
               <h3 className="font-semibold">Address</h3>
               <p className="text-gray-700">
-                Aarya Foundation Ashram,  
-                Near Gauseva Dham,  
-                Your City, India
+                Aarya Foundation ,
+                Kohlapur Maharashtra, India
+                416002
               </p>
             </div>
 
             <div>
               <h3 className="font-semibold">Phone</h3>
-              <p className="text-gray-700">+91 9876543210</p>
+              <p className="text-gray-700">+91 8618457301</p>
             </div>
 
             <div>
