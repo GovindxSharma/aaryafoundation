@@ -54,24 +54,6 @@ export default function Products() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-20 text-center bg-green-50 p-10 rounded-3xl">
-          <h3 className="text-2xl md:text-3xl font-bold">
-            Want to Order in Bulk?
-          </h3>
-
-          <p className="mt-3 text-gray-700 max-w-xl mx-auto">
-            For bulk orders, dealership, or special requirements, please get in touch with us.
-          </p>
-
-          <a
-            href="/contact"
-            className="inline-block mt-6 bg-green-900 text-white px-8 py-3 rounded-xl hover:bg-green-800 transition font-semibold"
-          >
-            Contact for Orders
-          </a>
-        </div>
-
       </div>
     </section>
   );
