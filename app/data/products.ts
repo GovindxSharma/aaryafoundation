@@ -17,24 +17,29 @@ const products: Product[] = [
   },
   {
     id: 3,
-    name: "Cow Shampoo",
-    image: "/GauShampoo.png",
-  },
-  {
-    id: 4,
     name: "Gobar Kande",
     image: "/kande.png",
   },
   {
-    id: 5,
+    id: 4,
     name: "Gobar Diya",
     image: "/dia.png",
   },
   {
-    id: 6,
-    name: "Gobar Cup",
+    id: 5,
+    name: "Surbhi Cup",
     image: "/gobarcup.png",
   },
+  {
+    id: 6,
+    name: "Radiation Chip",
+    image: "/radiation.png",
+  },
+  {
+    id: 7,
+    name: "Gomay Ganesh Murti",
+    image: "/gomay.png",
+  }
 ];
 
 export default products;

@@ -4,6 +4,7 @@ import Story from "./components/Story";
 import ProductPreview from "./components/ProductPreview";
 import SevaSection from "./components/SevaSection";
 import TestimonialImpact from "./components/TestimonialImpact";
+import PartnerBrands from "./components/PartnerBrands";
 
 export default function Home() {
   return (
@@ -40,6 +41,12 @@ export default function Home() {
           <ProductPreview />
         </div>
       </section>
+
+      <section className="py-10 bg-green-50">
+  <div className="container mx-auto px-4">
+    <PartnerBrands />
+  </div>
+</section>
 
      
        

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import products, { Product } from "../data/products";
+import Outlet  from "../components/Outlet";
 
 export default function Products() {
   return (
@@ -53,6 +54,8 @@ export default function Products() {
             </div>
           ))}
         </div>
+
+        <Outlet/>
 
       </div>
     </section>

@@ -6,7 +6,7 @@ export default function SevaSection() {
           {/* Heading */}
           <div className="text-center mb-10">
             <h2 className="text-4xl md:text-5xl font-bold">
-              सनातन धर्म में सेवा का महत्व
+              सनातन धर्म में गौसेवा का महत्व
             </h2>
   
             <p className="mt-5 text-lg md:text-xl text-gray-800">

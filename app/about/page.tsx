@@ -5,7 +5,7 @@ export default function About() {
     {
       name: "Prasad Govind Purohit",
       title: "The Visionary Who Chose Seva Over Security ",
-      image: "/purohit.png", // change if needed
+      image: "/purohitt.png", 
       content: (
         <>
           <p>
@@ -83,7 +83,7 @@ export default function About() {
           </p>
 
           <p>
-            As Founder of Aatmaya Farms, he works across Maharashtra and parts
+            As  Co-Founder of Aatmaya Farms, he works across Maharashtra and parts
             of Gujarat helping Gaushalas transform from donation-dependent
             shelters into structured rural enterprises.
           </p>
