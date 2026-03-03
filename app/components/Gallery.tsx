@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Gallery() {
   const images: string[] = [
     "/babycow.jpeg",
-   "/cow.jpeg",
+   "/gallery.png",
    "/cowcare.jpeg",
    "/cowcare1.jpeg",
    "/cowcare2.jpeg",

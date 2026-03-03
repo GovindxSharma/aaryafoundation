@@ -39,19 +39,21 @@ export default function Navbar() {
           {/* LOGO */}
           <Link href="/" className="flex items-center">
   <Image
-    src="/aryalogo.png"
+    src="/main.png"
     alt="Aarya Foundation Logo"
-    width={120}
-    height={120}
+    width={140}
+    height={140}
     priority
     className="
       w-16 h-16 md:w-20 md:h-20
       object-contain
-      brightness-0 invert
+      invert brightness-0
       drop-shadow-lg
+
     "
   />
 </Link>
+
 
           {/* DESKTOP MENU */}
           <div className="hidden md:flex items-center space-x-6">

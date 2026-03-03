@@ -10,8 +10,8 @@ export default function SevaSection() {
             </h2>
   
             <p className="mt-5 text-lg md:text-xl text-gray-800">
-              हिंदू परंपरा में सेवा को सबसे श्रेष्ठ धर्म और पूजा का रूप माना गया है।  
-              निःस्वार्थ भाव से की गई सेवा मनुष्य को आध्यात्मिक उन्नति और आत्मशुद्धि की ओर ले जाती है।
+              हिंदू परंपरा में गौसेवा को सबसे श्रेष्ठ धर्म और पूजा का रूप माना गया है।  
+              निःस्वार्थ भाव से की गई गौसेवा मनुष्य को आध्यात्मिक उन्नति और आत्मशुद्धि की ओर ले जाती है।
             </p>
           </div>
   
@@ -21,7 +21,7 @@ export default function SevaSection() {
             {/* Left Content */}
             <div className="bg-white p-8 rounded-lg shadow">
               <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-                सच्ची सेवा का अर्थ
+                सच्ची गौसेवा का अर्थ
               </h3>
   
               <ul className="space-y-3 text-lg md:text-xl text-gray-800">
@@ -87,7 +87,7 @@ export default function SevaSection() {
               href="/donation"
               className="bg-green-900 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-green-800 transition"
             >
-              सेवा में सहभागी बनें
+              गौसेवा में सहभागी बनें
             </a>
           </div>
   
