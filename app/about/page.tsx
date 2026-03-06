@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TeamSection from "../components/TeamSection";
 
 export default function About() {
   const stories = [
@@ -185,6 +186,8 @@ export default function About() {
             </div>
           ))}
         </div>
+
+        <TeamSection/>
 
         {/* FINAL CTA */}
         <div className="mt-24 md:mt-28 text-center bg-green-50 rounded-3xl p-10 md:p-14">

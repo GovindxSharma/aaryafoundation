@@ -24,7 +24,7 @@ export default function OutletStores() {
             Our Outlet Stores
           </h2>
           <p className="text-gray-600 mt-2">
-            Visit our outlets and be part of the Gau Seva mission.
+            Visit your nearby outlet store today.
           </p>
         </div>
 

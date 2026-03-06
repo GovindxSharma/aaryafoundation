@@ -59,7 +59,7 @@ export default function Donation() {
   {/* LEFT — IMAGE */}
   <div className="w-full">
     <Image
-      src="/gaugullakk.png" // your image
+      src="/piggy.png" // your image
       alt="Gau Gullak"
       width={500}
       height={400}
@@ -96,12 +96,13 @@ export default function Donation() {
 
 {/* CTA */}
 <div className="mt-8 text-center">
-  <a
-    href="https://wa.me/919876543210"
+<a
+    href="https://wa.me/918618457301?text=Namaste%20I%20would%20like%20to%20request%20a%20Gau%20Gullak.%20Please%20share%20the%20details."
     target="_blank"
+    rel="noopener noreferrer"
     className="inline-block bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition font-semibold"
   >
-     Request Gau Gullak for Your Child
+    Request Gau Gullak for Your Child
   </a>
 </div>
 </div>

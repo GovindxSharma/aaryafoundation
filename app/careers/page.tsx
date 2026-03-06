@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const CareerPage = () => {
   const openWhatsApp = () => {
-    window.open("https://wa.me/919712935176", "_blank");
+    window.open("https://wa.me/918618457301", "_blank");
   };
 
   return (
@@ -40,7 +40,7 @@ const CareerPage = () => {
           {/* RIGHT IMAGE */}
           <div className="relative w-full h-[320px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/about.png"
+              src="/career.png"
               alt="Aarya Foundation Gau Seva"
               fill
               className="object-cover"

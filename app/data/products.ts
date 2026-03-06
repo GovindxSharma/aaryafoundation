@@ -12,7 +12,7 @@ const products: Product[] = [
   },
   {
     id: 2,
-    name: "Organic Dhoop Patti",
+    name: "Natural Dhoop Patti",
     image: "/dhoopbatti.png",
   },
   {
