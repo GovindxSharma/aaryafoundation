@@ -6,7 +6,7 @@ const partners = [
   { name: "Atmaya", logo: "/1.png" },
   { name: "Panchbhata", logo: "/panchbhata.png" },
   { name: "GouKripa", logo: "/goukripa.png" },
-  { name: "Awbi", logo: "/awbi.png" },
+  { name: "Awbi", logo: "/awari.png" },
 ];
 
 export default function PartnerBrands() {

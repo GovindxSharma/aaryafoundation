@@ -59,7 +59,7 @@ export default function Donation() {
   {/* LEFT — IMAGE */}
   <div className="w-full">
     <Image
-      src="/piggy.png" // your image
+      src="/Gaugullak.jpeg" // your image
       alt="Gau Gullak"
       width={500}
       height={400}

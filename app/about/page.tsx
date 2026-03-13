@@ -78,14 +78,14 @@ export default function About() {
         <>
           <p>
             Behind every mission that survives long-term, there is structure.
-            Niraj Purohit brings that strength to Aarya Foundation with 20+
+            Niraj Kantilal Purohit brings that strength to Aarya Foundation with 20+
             years of marketing and business experience and 5+ years dedicated
             to cow-based initiatives.
           </p>
 
           <p>
             As  Co-Founder of Aatmaya Farms, he works across Maharashtra and parts
-            of Gujarat helping Gaushalas transform from donation-dependent
+            of Gujarat, Bihar, Uttar Pradesh and Madhya Pradesh helping Gaushalas transform from donation-dependent
             shelters into structured rural enterprises.
           </p>
 
