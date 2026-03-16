@@ -39,7 +39,7 @@ export default function Contact() {
               <h3 className="font-semibold">Address</h3>
               <p className="text-gray-700">
                 Aarya Foundation ,
-                Kohlapur Maharashtra, India
+                Kolhapur Maharashtra, India
                 416002
               </p>
             </div>
