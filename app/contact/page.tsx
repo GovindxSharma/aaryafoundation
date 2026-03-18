@@ -5,11 +5,40 @@ import { MessageCircle } from "lucide-react";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  const formData = new FormData(e.currentTarget);
+
+  const body = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    message: formData.get("message"),
   };
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(body),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      e.currentTarget.reset();
+      setSubmitted(true);
+    }
+  } catch (err) {
+    console.error(err);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <section className="py-16 bg-gray-50">
@@ -85,12 +114,14 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
+                  name="name"
                   placeholder="Full Name"
                   className="border p-3 w-full rounded"
                   required
                 />
 
                 <input
+                  name="email"
                   placeholder="Email Address"
                   type="email"
                   className="border p-3 w-full rounded"
@@ -98,12 +129,14 @@ export default function Contact() {
                 />
 
                 <input
+                  name="phone"
                   placeholder="Phone Number"
                   className="border p-3 w-full rounded"
                   required
                 />
 
                 <textarea
+                  name="message"
                   placeholder="Your Message"
                   className="border p-3 w-full rounded"
                   rows={4}
@@ -112,9 +145,14 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition w-full"
+                  disabled={loading}
+                  className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition w-full flex justify-center items-center gap-2 disabled:opacity-70"
                 >
-                  Send Query
+                  {loading && (
+                    <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                  )}
+
+                  {loading ? "Sending..." : "Send Query"}
                 </button>
               </form>
             )}
