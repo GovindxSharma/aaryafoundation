@@ -126,63 +126,47 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
 
         {/* PAYMENT DETAILS */}
-        <div className="mt-10 bg-white p-8 rounded-lg shadow">
-          <h2 className="text-2xl font-bold mb-6">Payment Options</h2>
+<div className="mt-10 bg-white p-8 rounded-lg shadow">
+  <h2 className="text-2xl font-bold mb-6 text-center">
+    Payment Options
+  </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* BANK */}
-            <div className="border p-5 rounded-lg">
-              <h3 className="font-semibold text-lg mb-3">Bank Transfer</h3>
+  <div className="flex justify-center">
+    <div className="border p-6 rounded-lg w-full md:w-2/3 lg:w-1/2">
+      <h3 className="font-semibold text-lg mb-4 text-center">
+        Bank Transfer
+      </h3>
 
-              <p>
-                <b>Account Name:</b> AARYA FOUNDATION KOLHAPUR
-              </p>
-              <p>
-                <b>Account Number:</b> 321401010042081
-              </p>
-              <p>
-                <b>IFSC Code:</b> UBIN0532142
-              </p>
-              <p>
-                <b>Bank:</b> Union Bank{" "}
-              </p>
-              <p>
-                <b>Branch:</b> Kolhapur Laxmipuri Branch
-              </p>
-            </div>
+      <div className="space-y-2 text-gray-700">
+        <p>
+          <b>Account Name:</b> AARYA FOUNDATION KOLHAPUR
+        </p>
+        <p>
+          <b>Account Number:</b> 321401010042081
+        </p>
+        <p>
+          <b>IFSC Code:</b> UBIN0532142
+        </p>
+        <p>
+          <b>Bank:</b> Union Bank
+        </p>
+        <p>
+          <b>Branch:</b> Kolhapur Laxmipuri Branch
+        </p>
+      </div>
+    </div>
+  </div>
 
-            {/* UPI */}
-            <div className="border p-5 rounded-lg">
-              <h3 className="font-semibold text-lg mb-3">UPI Payment</h3>
-
-              <p className="text-xl font-bold text-green-900">
-                aaryafoundation@upi
-              </p>
-
-              <div className="mt-4 flex flex-col items-center">
-                <p className="text-sm text-gray-600 mb-2">Scan to Donate</p>
-
-                <Image
-                  src="/upi-qr.png"
-                  alt="UPI QR Code"
-                  width={200}
-                  height={200}
-                  className="border rounded"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-6 text-center">
-            <a
-              href="https://wa.me/919876543210"
-              target="_blank"
-              className="inline-block text-green-900 font-semibold hover:underline"
-            >
-              Need help donating? Chat with us on WhatsApp
-            </a>
-          </div>
-        </div>
+  <div className="mt-6 text-center">
+    <a
+      href="https://wa.me/918618457301?text=Namaste%20I%20need%20assistance%20with%20making%20a%20donation.%20Please%20help."
+      target="_blank"
+      className="inline-block text-green-900 font-semibold hover:underline"
+    >
+      Need help donating? Chat with us on WhatsApp
+    </a>
+  </div>
+</div>
 
         {/* DONATION FORM */}
         <div className="mt-10 bg-white p-8 rounded-lg shadow">
