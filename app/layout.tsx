@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata = {
-  title: "Aarya Foundation – Gauseva",
+  title: "Aarya Foundation",
   description: "Serving Cows with Love and Devotion",
 };
 
