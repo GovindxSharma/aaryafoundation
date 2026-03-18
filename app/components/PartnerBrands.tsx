@@ -35,17 +35,17 @@ export default function PartnerBrands() {
           <div className="flex items-center gap-8 md:gap-14 animate-marquee w-max">
             {loopPartners.map((partner, index) => (
               <div
-                key={index}
-                className="flex items-center justify-center min-w-[130px] md:min-w-[180px]"
-              >
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  width={220}
-                  height={120}
-                  className="object-contain h-14 md:h-20 w-auto"
-                />
-              </div>
+              key={index}
+              className="flex items-center justify-center min-w-[160px] md:min-w-[220px]"
+            >
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                width={260}
+                height={140}
+                className="object-contain h-20 md:h-32 w-auto"
+              />
+            </div>
             ))}
           </div>
         </div>

@@ -24,13 +24,7 @@ const team = [
     name: "Nisha Sane",
     role: "Community Outreach Support",
     image: "/coreteam.png",
-  },
-  {
-    name: "Sudipta Chattoraj",
-    role: "Community Outreach Support",
-    image: "/sudipta.jpeg",
-  },
-  
+  },  
   {
     name: "Devang Khandhar",
     role: "Community Outreach Support",
@@ -40,6 +34,11 @@ const team = [
     name: "Rahul Joshi",
     role: "Community Outreach Support",
     image: "/rahul.jpeg",
+  },
+  {
+    name: "Sudipta Chattoraj",
+    role: "Community Outreach Support",
+    image: "/sudipta.jpeg",
   },
   
 ];
