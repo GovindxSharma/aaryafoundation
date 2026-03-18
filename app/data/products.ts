@@ -12,7 +12,7 @@ const products: Product[] = [
   },
   {
     id: 2,
-    name: "Natural Dhoop Patti",
+    name: "Natural Gomay Dhoop Tikki",
     image: "/dhoopbatti.png",
   },
   {

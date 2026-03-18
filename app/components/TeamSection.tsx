@@ -11,20 +11,26 @@ const team = [
     image: "/adv1.png",
   },
   {
-    name: "Sudipta Chattoraj",
-    role: "Community Outreach Support",
-    image: "/sudipta.jpeg",
-  },
-  {
     name: "Deepali Salunkhe",
     role: "Community Outreach Support",
     image: "/diplai.jpeg",
+  },
+  {
+    name: "Kiran Vake",
+    role: "Community Outreach Support",
+    image: "/kiran.jpeg",
   },
   {
     name: "Nisha Sane",
     role: "Community Outreach Support",
     image: "/coreteam.png",
   },
+  {
+    name: "Sudipta Chattoraj",
+    role: "Community Outreach Support",
+    image: "/sudipta.jpeg",
+  },
+  
   {
     name: "Devang Khandhar",
     role: "Community Outreach Support",
@@ -35,11 +41,7 @@ const team = [
     role: "Community Outreach Support",
     image: "/rahul.jpeg",
   },
-  {
-    name: "Kiran Vake",
-    role: "Community Outreach Support",
-    image: "/kiran.jpeg",
-  },
+  
 ];
 
 export default function TeamSection() {
