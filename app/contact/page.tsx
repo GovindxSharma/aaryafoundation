@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { MessageCircle } from "lucide-react";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -13,7 +14,6 @@ export default function Contact() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 max-w-5xl">
-
         {/* HEADER */}
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold">
@@ -21,26 +21,20 @@ export default function Contact() {
           </h1>
 
           <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
-            Have questions about Gauseva, donations, volunteering or our initiatives?  
-            Reach out to us anytime – we are here to help.
+            Have questions about Gauseva, donations, volunteering or our
+            initiatives? Reach out to us anytime – we are here to help.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 mt-12">
-
           {/* CONTACT DETAILS */}
           <div className="bg-white p-8 rounded-lg shadow space-y-6">
-
-            <h2 className="text-2xl font-bold">
-              Get in Touch
-            </h2>
+            <h2 className="text-2xl font-bold">Get in Touch</h2>
 
             <div>
               <h3 className="font-semibold">Address</h3>
               <p className="text-gray-700">
-                Aarya Foundation ,
-                Kohlapur Maharashtra, India
-                416002
+                Aarya Foundation, Shirwal, Near Mirje, Maharashtra 412801
               </p>
             </div>
 
@@ -51,17 +45,19 @@ export default function Contact() {
 
             <div>
               <h3 className="font-semibold">Email</h3>
-              <p className="text-gray-700">info@aaryafoundation.com</p>
+              <p className="text-gray-700">aaryagaushala@gmail.com</p>
             </div>
 
             <div>
               <h3 className="font-semibold">Connect Instantly</h3>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/918618457301"
                 target="_blank"
-                className="inline-block mt-2 text-green-900 font-semibold hover:underline"
+                rel="noopener noreferrer"
+                className="mt-3 flex items-center justify-center gap-3 bg-green-500 text-white px-5 py-3 rounded-lg font-semibold shadow-md hover:bg-green-600 hover:scale-105 transition transform animate-pulse"
               >
+                <MessageCircle className="w-5 h-5" />
                 Chat with us on WhatsApp
               </a>
             </div>
@@ -76,16 +72,11 @@ export default function Contact() {
 
           {/* CONTACT FORM */}
           <div className="bg-white p-8 rounded-lg shadow">
-
-            <h2 className="text-2xl font-bold mb-4">
-              Send Us a Message
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">Send Us a Message</h2>
 
             {submitted ? (
               <div className="p-6 bg-green-50 border border-green-200 rounded text-center">
-                <h3 className="text-xl font-bold text-green-900">
-                  Thank You!
-                </h3>
+                <h3 className="text-xl font-bold text-green-900">Thank You!</h3>
 
                 <p className="mt-2">
                   We have received your message and will respond soon.
@@ -93,7 +84,6 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-
                 <input
                   placeholder="Full Name"
                   className="border p-3 w-full rounded"
@@ -126,7 +116,6 @@ export default function Contact() {
                 >
                   Send Query
                 </button>
-
               </form>
             )}
           </div>
@@ -134,31 +123,29 @@ export default function Contact() {
 
         {/* MAP SECTION */}
         <div className="mt-12 bg-white p-8 rounded-lg shadow">
-          <h2 className="text-2xl font-bold mb-4">
-            Visit Us
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">Visit Us</h2>
 
           <div className="w-full h-[350px]">
             <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3791.8101664276724!2d73.9254341751822!3d18.12655558289223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDA3JzM1LjYiTiA3M8KwNTUnNDAuOCJF!5e0!3m2!1sen!2sin!4v1773824525432!5m2!1sen!2sin"
               className="w-full h-full rounded"
-              src="https://www.google.com/maps?q=india&output=embed"
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
 
         {/* CALL TO ACTION */}
         <div className="mt-12 text-center bg-green-50 p-8 rounded-lg">
-          <h3 className="text-2xl font-bold">
-            Join Hands for Gauseva
-          </h3>
+          <h3 className="text-2xl font-bold">Join Hands for Gauseva</h3>
 
           <p className="mt-3 text-gray-700">
-            Whether you wish to donate, volunteer or simply visit our gaushala,  
+            Whether you wish to donate, volunteer or simply visit our gaushala,
             we welcome you with open hearts.
           </p>
         </div>
-
       </div>
     </section>
   );

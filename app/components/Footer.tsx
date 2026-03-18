@@ -61,7 +61,7 @@ export default function Footer() {
             Maharashtra 412801
           </p>
 
-          <p className="mt-3 text-gray-300">Phone: +91 9920043133</p>
+          <p className="mt-3 text-gray-300">Phone: +91 8618457301</p>
 
           <p className="text-gray-300">Email: aaryagaushala@gmail.com</p>
         </div>

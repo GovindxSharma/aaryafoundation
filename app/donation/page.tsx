@@ -5,27 +5,46 @@ import { useState } from "react";
 
 export default function Donation() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const amounts = [101, 251, 501, 1001, 2100];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  const formData = new FormData(e.currentTarget);
+
+  try {
+    const res = await fetch("/api/donation", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      setSubmitted(true);
+    }
+  } catch (err) {
+    console.error(err);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 max-w-5xl">
-
         {/* HEADER */}
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            Support Gauseva
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Support Gauseva</h1>
 
           <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
-            Your contribution provides food, shelter, medical care and love to rescued cows.  
-            As a token of gratitude, every donor receives a small gift from Aarya Foundation.
+            Your contribution provides food, shelter, medical care and love to
+            rescued cows. As a token of gratitude, every donor receives a small
+            gift from Aarya Foundation.
           </p>
         </div>
 
@@ -52,97 +71,96 @@ export default function Donation() {
         </div>
 
         {/* 🐄 GAU GULLAK SECTION */}
-<div className="mt-12 bg-white p-8 rounded-lg shadow">
+        <div className="mt-12 bg-white p-8 rounded-lg shadow">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* LEFT — IMAGE */}
+            <div className="w-full">
+              <Image
+                src="/Gaugullak.jpeg" // your image
+                alt="Gau Gullak"
+                width={500}
+                height={400}
+                className="rounded-lg w-full object-cover"
+              />
+            </div>
 
-<div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* RIGHT — CONTENT */}
+            <div>
+              <h2 className="text-3xl font-bold text-green-900 mb-4">
+                Gau Gullak – Chhoti Bachat, Badi Seva
+              </h2>
 
-  {/* LEFT — IMAGE */}
-  <div className="w-full">
-    <Image
-      src="/Gaugullak.jpeg" // your image
-      alt="Gau Gullak"
-      width={500}
-      height={400}
-      className="rounded-lg w-full object-cover"
-    />
-  </div>
+              <p className="text-gray-700 leading-relaxed">
+                गौ गुल्लक एक सरल और प्यारा प्रयास है जिससे हम हर घर में सेवा की
+                परंपरा शुरू करना चाहते हैं। हम आपके घर एक फिजिकल गुल्लक देंगे
+                जिसमें बच्चे अपनी इच्छा से छोटी छोटी बचत कर सकते हैं — जैसे
+                पॉकेट मनी का हिस्सा, त्योहार के पैसे या किसी खुशी के मौके पर।
+              </p>
 
-  {/* RIGHT — CONTENT */}
-  <div>
-    <h2 className="text-3xl font-bold text-green-900 mb-4">
-       Gau Gullak – Chhoti Bachat, Badi Seva
-    </h2>
+              <p className="text-gray-700 leading-relaxed mt-3">
+                जब गुल्लक भर जाए, आप परिवार के साथ मिलकर उसमें जमा राशि को गिनकर
+                ऑनलाइन आर्या फाउंडेशन को ट्रांसफर कर सकते हैं। हर छोटा सिक्का
+                हमारी गौशाला के लिए भोजन, दवा और सुरक्षा का सहारा बनता है।
+              </p>
 
-    <p className="text-gray-700 leading-relaxed">
-      गौ गुल्लक एक सरल और प्यारा प्रयास है जिससे हम हर घर में सेवा की परंपरा
-      शुरू करना चाहते हैं। हम आपके घर एक फिजिकल गुल्लक देंगे जिसमें बच्चे
-      अपनी इच्छा से छोटी छोटी बचत कर सकते हैं — जैसे पॉकेट मनी का हिस्सा,
-      त्योहार के पैसे या किसी खुशी के मौके पर।
-    </p>
+              <div className="mt-4 bg-green-50 border border-green-200 p-4 rounded">
+                <p className="text-green-900 font-semibold">
+                  यह सिर्फ दान नहीं है — यह एक संस्कार है जो अगली पीढ़ी को दिया
+                  जा रहा है।
+                </p>
+              </div>
+            </div>
+          </div>
 
-    <p className="text-gray-700 leading-relaxed mt-3">
-      जब गुल्लक भर जाए, आप परिवार के साथ मिलकर उसमें जमा राशि को गिनकर
-      ऑनलाइन आर्या फाउंडेशन को ट्रांसफर कर सकते हैं। हर छोटा सिक्का हमारी
-      गौशाला के लिए भोजन, दवा और सुरक्षा का सहारा बनता है।
-    </p>
-
-    <div className="mt-4 bg-green-50 border border-green-200 p-4 rounded">
-      <p className="text-green-900 font-semibold">
-        यह सिर्फ दान नहीं है — यह एक संस्कार है जो अगली पीढ़ी को दिया जा रहा है।
-      </p>
-    </div>
-  </div>
-</div>
-
-{/* CTA */}
-<div className="mt-8 text-center">
-<a
-    href="https://wa.me/918618457301?text=Namaste%20I%20would%20like%20to%20request%20a%20Gau%20Gullak.%20Please%20share%20the%20details."
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition font-semibold"
-  >
-    Request Gau Gullak for Your Child
-  </a>
-</div>
-</div>
+          {/* CTA */}
+          <div className="mt-8 text-center">
+            <a
+              href="https://wa.me/918618457301?text=Namaste%20I%20would%20like%20to%20request%20a%20Gau%20Gullak.%20Please%20share%20the%20details."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition font-semibold"
+            >
+              Request Gau Gullak for Your Child
+            </a>
+          </div>
+        </div>
 
         {/* PAYMENT DETAILS */}
         <div className="mt-10 bg-white p-8 rounded-lg shadow">
-
-          <h2 className="text-2xl font-bold mb-6">
-            Payment Options
-          </h2>
+          <h2 className="text-2xl font-bold mb-6">Payment Options</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
             {/* BANK */}
             <div className="border p-5 rounded-lg">
-              <h3 className="font-semibold text-lg mb-3">
-                Bank Transfer
-              </h3>
+              <h3 className="font-semibold text-lg mb-3">Bank Transfer</h3>
 
-              <p><b>Account Name:</b> AARYA FOUNDATION KOHLAPUR</p>
-              <p><b>Account Number:</b> 321401010042081</p>
-              <p><b>IFSC Code:</b> UBIN0532142</p>
-              <p><b>Bank:</b> Union Bank </p>
-              <p><b>Branch:</b> Kohlapur Laxmipuri Branch</p>
+              <p>
+                <b>Account Name:</b> AARYA FOUNDATION KOLHAPUR
+              </p>
+              <p>
+                <b>Account Number:</b> 321401010042081
+              </p>
+              <p>
+                <b>IFSC Code:</b> UBIN0532142
+              </p>
+              <p>
+                <b>Bank:</b> Union Bank{" "}
+              </p>
+              <p>
+                <b>Branch:</b> Kolhapur Laxmipuri Branch
+              </p>
             </div>
 
             {/* UPI */}
             <div className="border p-5 rounded-lg">
-              <h3 className="font-semibold text-lg mb-3">
-                UPI Payment
-              </h3>
+              <h3 className="font-semibold text-lg mb-3">UPI Payment</h3>
 
               <p className="text-xl font-bold text-green-900">
                 aaryafoundation@upi
               </p>
 
               <div className="mt-4 flex flex-col items-center">
-                <p className="text-sm text-gray-600 mb-2">
-                  Scan to Donate
-                </p>
+                <p className="text-sm text-gray-600 mb-2">Scan to Donate</p>
 
                 <Image
                   src="/upi-qr.png"
@@ -164,17 +182,15 @@ export default function Donation() {
               Need help donating? Chat with us on WhatsApp
             </a>
           </div>
-
         </div>
 
         {/* DONATION FORM */}
         <div className="mt-10 bg-white p-8 rounded-lg shadow">
-          <h2 className="text-2xl font-bold mb-4">
-            Share Donation Details
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">Share Donation Details</h2>
 
           <p className="text-gray-700 mb-6">
-            After donating, kindly submit your details and payment proof so we can send you a token of love.
+            After donating, kindly submit your details and payment proof so we
+            can send you a token of love.
           </p>
 
           {submitted ? (
@@ -189,15 +205,16 @@ export default function Donation() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
-
               <div className="grid md:grid-cols-2 gap-4">
                 <input
+                  name="name"
                   placeholder="Full Name"
                   className="border p-3 w-full rounded"
                   required
                 />
 
                 <input
+                  name="email"
                   placeholder="Email Address"
                   className="border p-3 w-full rounded"
                   type="email"
@@ -207,12 +224,14 @@ export default function Donation() {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <input
+                  name="phone"
                   placeholder="Phone Number"
                   className="border p-3 w-full rounded"
                   required
                 />
 
                 <input
+                  name="amount"
                   placeholder="Donation Amount"
                   className="border p-3 w-full rounded"
                   type="number"
@@ -221,6 +240,7 @@ export default function Donation() {
               </div>
 
               <textarea
+                name="address"
                 placeholder="Full Address (For sending token of love)"
                 className="border p-3 w-full rounded"
                 rows={3}
@@ -230,26 +250,29 @@ export default function Donation() {
                 <label className="block mb-2 text-gray-700">
                   Upload Payment Screenshot
                 </label>
+                <input name="screenshot" type="file" required />
 
-                <input type="file" className="w-full" required />
+                {/* <input type="file" className="w-full" required /> */}
               </div>
 
               <button
                 type="submit"
-                className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition w-full"
+                disabled={loading}
+                className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition w-full flex justify-center items-center gap-2 disabled:opacity-70"
               >
-                Submit Donation Details
-              </button>
+                {loading && (
+                  <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                )}
 
+                {loading ? "Submitting..." : "Submit Donation Details"}
+              </button>
             </form>
           )}
         </div>
 
         {/* IMPACT SECTION */}
         <div className="mt-12 text-center bg-green-50 p-8 rounded-lg">
-          <h3 className="text-2xl font-bold">
-            Where Your Donation Goes
-          </h3>
+          <h3 className="text-2xl font-bold">Where Your Donation Goes</h3>
 
           <div className="grid md:grid-cols-3 gap-6 mt-6">
             <div>
@@ -274,7 +297,6 @@ export default function Donation() {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
