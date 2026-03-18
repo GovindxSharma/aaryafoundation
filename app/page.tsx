@@ -5,6 +5,7 @@ import ProductPreview from "./components/ProductPreview";
 import SevaSection from "./components/SevaSection";
 import TestimonialImpact from "./components/TestimonialImpact";
 import PartnerBrands from "./components/PartnerBrands";
+import TeamSection from "./components/TeamSection"; // 👈 ADD THIS
 
 export default function Home() {
   return (
@@ -46,10 +47,16 @@ export default function Home() {
   <div className="container mx-auto px-4">
     <PartnerBrands />
   </div>
-</section>
+      </section>
+      
+       {/* TEAM SECTION */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <TeamSection />
+        </div>
+      </section>
 
-     
-       
+      {/* TESTIMONIALS & IMPACT */}
       <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
           <TestimonialImpact/>
