@@ -6,6 +6,8 @@ import { useState } from "react";
 export default function Donation() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [fileName, setFileName] = useState<string | null>(null);
+const [file, setFile] = useState<File | null>(null);
 
   const amounts = [101, 251, 501, 1001, 2100];
 
@@ -126,47 +128,47 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
 
         {/* PAYMENT DETAILS */}
-<div className="mt-10 bg-white p-8 rounded-lg shadow">
-  <h2 className="text-2xl font-bold mb-6 text-center">
-    Payment Options
-  </h2>
+        <div className="mt-10 bg-white p-8 rounded-lg shadow">
+          <h2 className="text-2xl font-bold mb-6 text-center">
+            Payment Options
+          </h2>
 
-  <div className="flex justify-center">
-    <div className="border p-6 rounded-lg w-full md:w-2/3 lg:w-1/2">
-      <h3 className="font-semibold text-lg mb-4 text-center">
-        Bank Transfer
-      </h3>
+          <div className="flex justify-center">
+            <div className="border p-6 rounded-lg w-full md:w-2/3 lg:w-1/2">
+              <h3 className="font-semibold text-lg mb-4 text-center">
+                Bank Transfer
+              </h3>
 
-      <div className="space-y-2 text-gray-700">
-        <p>
-          <b>Account Name:</b> AARYA FOUNDATION KOLHAPUR
-        </p>
-        <p>
-          <b>Account Number:</b> 321401010042081
-        </p>
-        <p>
-          <b>IFSC Code:</b> UBIN0532142
-        </p>
-        <p>
-          <b>Bank:</b> Union Bank
-        </p>
-        <p>
-          <b>Branch:</b> Kolhapur Laxmipuri Branch
-        </p>
-      </div>
-    </div>
-  </div>
+              <div className="space-y-2 text-gray-700">
+                <p>
+                  <b>Account Name:</b> AARYA FOUNDATION KOLHAPUR
+                </p>
+                <p>
+                  <b>Account Number:</b> 321401010042081
+                </p>
+                <p>
+                  <b>IFSC Code:</b> UBIN0532142
+                </p>
+                <p>
+                  <b>Bank:</b> Union Bank
+                </p>
+                <p>
+                  <b>Branch:</b> Kolhapur Laxmipuri Branch
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div className="mt-6 text-center">
-    <a
-      href="https://wa.me/918618457301?text=Namaste%20I%20need%20assistance%20with%20making%20a%20donation.%20Please%20help."
-      target="_blank"
-      className="inline-block text-green-900 font-semibold hover:underline"
-    >
-      Need help donating? Chat with us on WhatsApp
-    </a>
-  </div>
-</div>
+          <div className="mt-6 text-center">
+            <a
+              href="https://wa.me/918618457301?text=Namaste%20I%20need%20assistance%20with%20making%20a%20donation.%20Please%20help."
+              target="_blank"
+              className="inline-block text-green-900 font-semibold hover:underline"
+            >
+              Need help donating? Chat with us on WhatsApp
+            </a>
+          </div>
+        </div>
 
         {/* DONATION FORM */}
         <div className="mt-10 bg-white p-8 rounded-lg shadow">
@@ -231,12 +233,52 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               ></textarea>
 
               <div>
-                <label className="block mb-2 text-gray-700">
+                <label className="block mb-2 text-gray-700 font-medium">
                   Upload Payment Screenshot
                 </label>
-                <input name="screenshot" type="file" required />
 
-                {/* <input type="file" className="w-full" required /> */}
+                {!file ? (
+                  <label className="flex flex-col items-center justify-center w-full p-6 border-2 border-dashed border-green-300 rounded-lg cursor-pointer hover:bg-green-50 transition">
+                    <span className="text-green-900 font-semibold">
+                      Click to upload screenshot
+                    </span>
+                    <span className="text-sm text-gray-500 mt-1">
+                      PNG, JPG up to ~5MB
+                    </span>
+
+                    <input
+                      type="file"
+                      name="screenshot"
+                      accept="image/*"
+                      className="hidden"
+                      required
+                      onChange={(e) => {
+                        const selectedFile = e.target.files?.[0];
+                        if (selectedFile) {
+                          setFile(selectedFile);
+                          setFileName(selectedFile.name);
+                        }
+                      }}
+                    />
+                  </label>
+                ) : (
+                  <div className="flex items-center justify-between border p-4 rounded-lg bg-green-50">
+                    <div className="text-sm text-gray-700 truncate">
+                      📎 {fileName}
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFile(null);
+                        setFileName(null);
+                      }}
+                      className="text-red-500 hover:underline text-sm"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                )}
               </div>
 
               <button
